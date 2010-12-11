@@ -1,12 +1,39 @@
 <html>
 <head>
+<title>Патанжали</title>
 <style type="text/css">
+h4{
+color: #d33;
+}
 body{
+font-family: "Verdana";
 background-color: #ccc;
 }
 </style>
+<script src="jquery.js"></script>
+<script type="text/javascript">
+function toggle(name){
+	$(".source_"+name).toggle();
+}
+</script>
 </head>
 <body>
+Данная подборка переводов Йога-Сутр Патанджали взята с сайта <a href="http://psylib.org.ua/books/patanja/index.htm">psylib.org.ua</a> и призвана
+облегичть изучение и сравнение переводов, с целью более глубокго понимания оригинала.
+<br/></br/>
+Скрипт для герерации этой страницы доступен с <a href="https://github.com/styts/patanjali">github.com/styts/patanjali</a>.
+<hr/>
+<div id="menu"><a class="toggler" onclick="javascript:toggle('ostru')" href="#">ostru</a> | 
+<a class="toggler" onclick="javascript:toggle('popow')" href="#">popow</a> | 
+<a class="toggler" onclick="javascript:toggle('desik')" href="#">desik</a> | 
+<a class="toggler" onclick="javascript:toggle('falco')" href="#">falco</a> | 
+<a class="toggler" onclick="javascript:toggle('ganga')" href="#">ganga</a> | 
+<a class="toggler" onclick="javascript:toggle('latin')" href="#">latin</a> | 
+<a class="toggler" onclick="javascript:toggle('baily')" href="#">baily</a> | 
+<a class="toggler" onclick="javascript:toggle('rigin')" href="#">rigin</a> | 
+<a class="toggler" onclick="javascript:toggle('orlov')" href="#">orlov</a> | 
+<a class="toggler" onclick="javascript:toggle('svens')" href="#">svens</a> | 
+</div>
 <h4>1.1</h4>
 <span class="source_ostru"> Итак, наставление йоге.</span><br/>
 <span class="source_popow"> Вот объяснение сосредоточения.</span><br/>

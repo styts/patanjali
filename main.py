@@ -3,7 +3,7 @@ import glob,re,codecs, chardet
 from  _natsort import natsorted
 
 sutras = {}
-
+sources = []
 max_lines = []
 
 for f in glob.glob("original_txt/*"):
@@ -22,6 +22,8 @@ for f in glob.glob("original_txt/*"):
             if key not in sutras:
                 sutras[key]=[]
             sutras[key].append([l,source])
+            
+            if source not in sources: sources.append(source)
                 
             c=c+1
         else:
@@ -30,7 +32,10 @@ for f in glob.glob("original_txt/*"):
                 pass
     max_lines.append([f,c])
     
-
+    
+toggles = ""
+for s in sources:
+    toggles += "<a class=\"toggler\" onclick=\"javascript:toggle('%s')\" href=\"#\">%s</a> | \n" % (s,s)
 
 template = "".join(file('template.html', 'r').readlines())
 content = ""
@@ -41,7 +46,7 @@ for s in natsorted(sutras.keys()):
     for s in sutras[key]:
         content += "<span class=\"source_%s\">%s</span><br/>\n" % (s[1],s[0])
 
-template = template % content
+template = template % (toggles,content)
 
 fp = codecs.open('out.html',encoding='cp1251',mode='w')
 fp.write(template)

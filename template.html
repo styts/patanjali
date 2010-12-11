@@ -1,12 +1,29 @@
 <html>
 <head>
+<title>Патанжали</title>
 <style type="text/css">
+h4{
+color: #d33;
+}
 body{
+font-family: "Verdana";
 background-color: #ccc;
 }
 </style>
+<script src="jquery.js"></script>
+<script type="text/javascript">
+function toggle(name){
+	$(".source_"+name).toggle();
+}
+</script>
 </head>
 <body>
+Данная подборка переводов Йога-Сутр Патанджали взята с сайта <a href="http://psylib.org.ua/books/patanja/index.htm">psylib.org.ua</a> и призвана
+облегичть изучение и сравнение переводов, с целью более глубокго понимания оригинала.
+<br/></br/>
+Скрипт для герерации этой страницы доступен с <a href="https://github.com/styts/patanjali">github.com/styts/patanjali</a>.
+<hr/>
+<div id="menu">%s</div>
 %s
 </body>
 </html>
