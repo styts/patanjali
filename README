@@ -1,0 +1,11 @@
+Patanjali Yoga Sutras Russian Translation Comparison
+=====================================================
+
+Данная подборка переводов Йога-Сутр Патанджали взята с сайта http://psylib.org.ua/books/patanja/index.htm и призвана
+облегичть изучение и сравнение переводов, с целью более глубокго понимания оригинала.
+
+Скрипт для герерации этой страницы доступен с https://github.com/styts/patanjali.
+
+---
+
+Running main.py will generate out.html based on the files in the original_txt folder.
